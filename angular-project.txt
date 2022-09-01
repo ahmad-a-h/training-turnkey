@@ -1,0 +1,12 @@
+Create a new angular project with angular version 9.0.0
+the UI Library used for this project should be angular material 9.0.0 (@angular/material": "9.0.0")
+
+the project is a small trivia-like quiz application that should have the following features:
+1. make a login screen using the (login) API from the postman file.
+2. make a quiz form that uses (getRandomQuestion) request in the postman file that expects the user to input .
+the right answer out of three possible answers.
+3. use (checkAnswerIfRight) request from the postman file to check if the user's answer is right.
+4. add difficulty functionality by using (getQuestionByDifficulty) request (difficulty can be either 1 or 2 or 3).
+5. make a new page that has a table with all the questions using (getAllQuestions) request from postman file.
+6. implement functionality to add a question using (AddQuestionWithAnswers) request from postman file.
+
