@@ -7,7 +7,7 @@ import { Component, OnInit, Output,EventEmitter, Input } from '@angular/core';
 })
 export class ButtonComponent implements OnInit {
 @Output() btnClick=new EventEmitter()
-
+@Input() btnName:String='test'
 
   constructor() { }
 

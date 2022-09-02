@@ -1,0 +1,47 @@
+.app-button
+{
+    display: block;
+    margin-top: 62%;
+
+    
+}
+.dropDown{
+width: 200px;
+}
+.p
+{
+    padding-left: 3%;
+    border: 1px solid white;
+    width: 20px;
+    height: fit-content;
+    border-radius: 5px;
+    margin: 5px;
+   
+}
+
+#question {
+    width: 100%;
+    height: 100px;
+    margin: 5px;
+    padding: 3px 7px;
+    font-size: 17px;
+    border-radius: 5px;
+}
+    
+
+#answer
+{
+    border-radius: 5px;
+}
+
+.header
+{
+    
+    display: inline-flex ;
+}
+.icon
+{
+    position: relative;
+    margin-top: 6px;
+    left: 100px;
+}

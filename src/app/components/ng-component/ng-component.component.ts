@@ -9,7 +9,7 @@ import { credentials } from 'src/app/user';
 })
 export class NgComponentComponent implements OnInit {
   @Output() login: EventEmitter<credentials> = new EventEmitter();
-  @Input() title=''
+  btnName='login'
   constructor(public router: Router) { }
 
   ngOnInit(): void {}

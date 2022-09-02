@@ -7,7 +7,7 @@
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins";
 }
 
 .container {
@@ -32,6 +32,7 @@ body {
   margin: 5px;
   padding: 3px 7px;
   font-size: 17px;
+  
 }
 .btn
 {
@@ -45,5 +46,4 @@ body {
 
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
