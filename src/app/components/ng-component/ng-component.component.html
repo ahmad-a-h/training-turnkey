@@ -1,0 +1,23 @@
+<div class="container">
+    
+    <div class="form-control">
+        <label for="username">Username</label>
+        <input
+          type="text"
+          name="username"
+          id="day"
+          [(ngModel)]="username"
+        />
+    </div>
+    <div class="form-control">
+        <label for="day">Password</label>
+        <input
+          type="text"
+          name="password"
+          id="password"
+          [(ngModel)]="pass"
+        />
+    </div>
+    <app-button (click)="checklogin()"></app-button>
+
+</div>
