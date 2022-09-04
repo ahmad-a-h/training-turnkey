@@ -1,42 +1,42 @@
 <div class="container">
-    
-    <div class="header">
-            <button mat-button [matMenuTriggerFor]="menu">Choose Difficulty<mat-icon>more_vert</mat-icon></button>
-        <mat-menu #menu="matMenu">
-        <button mat-menu-item class="btn">1</button>
-        <button mat-menu-item class="btn">2</button>
-        <button mat-menu-item class="btn">3</button>
-        </mat-menu>
-       
-        
-        <div class="icon">
-            <mat-icon >refresh</mat-icon>
-        </div>
-        
+
+<div class="header">
+    <button class="text-justify" mat-button [matMenuTriggerFor]="menu">{{display}}<mat-icon>more_vert</mat-icon></button>
+    <mat-menu #menu="matMenu" class="icon" >
+    <button class="text-justify"  class="text-justify" (click)=dynamicnumber(1) mat-menu-item class="btn">1</button>
+    <button class="text-justify"  (click)=dynamicnumber(2) mat-menu-item class="btn">2</button>
+    <button class="text-justify" (click)=dynamicnumber(3) mat-menu-item class="btn">3</button>
+    </mat-menu>
+
+
+    <div class="icon">
+        <mat-icon >refresh</mat-icon>
     </div>
-    
-  
-    <div class="form-control" >
-        <label for="quesiton">Question</label>
-        <input
-          type="text"
-          name="question"
-          id="question"
-          disabled="true"
-         
+
+</div>
+
+
+<div class="my-form-control" >
+    <label for="quesiton">Question</label>
+    <input
+        type="text"
+        name="question"
+        id="question"
+        disabled="true"
         />
     </div>
-    <div class="form-control">
+
+
+    <div class="my-form-control">
         <label for="answer">Answer</label>
         <input
-          type="text"
-          name="answer"
-          id="answer"
-          
+        type="text"
+        name="answer"
+        id="answer"
         />
     </div>
-    
-    
 
-    <app-button class="app-button" ></app-button>
+    <app-button class="app-button d-flex justify-content-center "[btnName]="btnName" ></app-button>
+    <app-button class="app-button d-flex justify-content-center mt-2"[btnName]="btncreate" style="margin-top: 60px;" (click)="createQuestion()"></app-button>
+
 </div>

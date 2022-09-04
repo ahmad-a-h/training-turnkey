@@ -11,7 +11,8 @@ import { ErrorComponent } from './components/error/error.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import {MatMenuModule} from '@angular/material/menu';
-import {MatIconModule} from '@angular/material/icon'
+import {MatIconModule} from '@angular/material/icon';
+import { CreateQuestionComponent } from './components/create-question/create-question.component'
 
 
 @NgModule({
@@ -21,7 +22,7 @@ import {MatIconModule} from '@angular/material/icon'
     ButtonComponent,
     QuesitonsViewComponent,
     ErrorComponent,
-    
+    CreateQuestionComponent,
   ],
   imports: [
     BrowserModule,

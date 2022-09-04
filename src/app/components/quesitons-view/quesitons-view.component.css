@@ -1,8 +1,6 @@
 .app-button
 {
     display: block;
-    margin-top: 62%;
-
     
 }
 .dropDown{
@@ -41,7 +39,7 @@ width: 200px;
 }
 .icon
 {
-    position: relative;
+    position: absolute;
     margin-top: 6px;
-    left: 100px;
+    right: 830px;
 }
