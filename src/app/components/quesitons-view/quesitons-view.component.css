@@ -1,8 +1,6 @@
 .app-button
 {
     display: block;
-    margin-top: 62%;
-
     
 }
 .dropDown{
@@ -41,7 +39,24 @@ width: 200px;
 }
 .icon
 {
-    position: relative;
+    position: absolute;
     margin-top: 6px;
-    left: 100px;
+    right: 830px;
+}
+#btnsubmit .mat-button-base{
+    /* margin-left: 37%; */
+    margin: auto;
+    width: 200px !important;
+}
+::ng-deep #btnsubmit button
+{
+    width: 100px;
+    
+    margin-left: 115px;
+}
+.btnicon
+{
+    padding: 0;
+    border: none;
+    background: none;
 }
