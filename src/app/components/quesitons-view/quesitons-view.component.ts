@@ -12,4 +12,6 @@ export class QuesitonsViewComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  
+
 }
