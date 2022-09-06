@@ -35,7 +35,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatIconModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [QuesitonsViewComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

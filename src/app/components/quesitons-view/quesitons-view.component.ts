@@ -15,18 +15,27 @@ export class QuesitonsViewComponent implements OnInit {
 btnName="submit"
 btncreate="create a question"
 display = "Choose Difficulty"
-public question=[]
+random:string
+
+ question:questions[]=[]
   constructor(public router: Router,private http:HttpClient,private questionsService: QuestionsServiceService) { }
 
   ngOnInit(): void {
-    this.questionsService.getRandomQuestion().subscribe(data=>{
-      console.warn(data)
-    })
-  }
+    // this.questionsService.postRandomQuestion().subscribe(data=>{
+    //   console.warn(data)
+    // })
+  } 
 
-  dynamicnumber(e)
+  public dynamicnumber(e)
   {
-    this.display = e
+      this.display = e
+      this.questionsService.setDifficulty(e)
+      this.getQuestionDifficulty()
+     
+  }
+  var()
+  {
+    this.display
   }
   createQuestion()
   {
@@ -35,12 +44,26 @@ public question=[]
   }
 
 
-  // my_getRandomQuestion():
-  // {
-      
-  //   console.log<questions[]>(this.http.get('192.168.168.61:8081/quizapp/question'))
-  //   console.log("test")
-  // }
+  getRandom()
+  {
+    this.questionsService.getRandomQuestion().subscribe((data:any) => {
+      this.random=data["question"]
+      this.display="Choose Difficulty"
+    }
+    )
+  }
+
+  getQuestionDifficulty()
+  {
+    this.questionsService.difficultyQuestion().subscribe((data:any) => {
+      this.random=data["question"]
+     })
+  }
+
+ 
+  
+
+  
     
 
 }

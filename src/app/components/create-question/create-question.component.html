@@ -1,21 +1,28 @@
 <div class="container"> 
-    <h1>Quiz</h1>
+    
+    <button class="text-justify" mat-button [matMenuTriggerFor]="menu">{{display}}<mat-icon>more_vert</mat-icon></button>
+    <mat-menu #menu="matMenu" class="icon" >
+    <button class="text-justify"   (click)=dynamicnumber(1) mat-menu-item class="btn">1</button>
+    <button class="text-justify"  (click)=dynamicnumber(2) mat-menu-item class="btn">2</button>
+    <button class="text-justify" (click)=dynamicnumber(3) mat-menu-item class="btn">3</button>
+    </mat-menu>
+
     <div class="forms-container " style="margin-top: 20%;">
         <div class="input-group mb-3">
             <div class="input-group-prepend ">
               <span class="input-group-text" id="basic-addon1">Question</span>
             </div>
-            <textarea type="text" class="form-control" placeholder="question" aria-label="Question" aria-describedby="basic-addon1"></textarea>
+            <textarea type="text" class="form-control" placeholder="question" aria-label="Question" aria-describedby="basic-addon1" [(ngModel)]="question"></textarea>
           </div>
           <div class="input-group mb-3 ">
             <div class="input-group-prepend" >
               <span class="input-group-text " id="basic-addon1">Desired Answer</span>
             </div>
-            <input type="text" class="form-control" placeholder="answer" aria-label="Desired Answer" aria-describedby="basic-addon1" >
+            <input type="text" class="form-control" placeholder="answer" aria-label="Desired Answer" aria-describedby="basic-addon1" [(ngModel)]="answer" >
           </div>
     </div>
    
-    <app-button [btnName]="btnName" mt-2></app-button>
+    <app-button [btnName]="btnName" mt-2 (click)="createQuestion()"></app-button>
    
  
 </div>

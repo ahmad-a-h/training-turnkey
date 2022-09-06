@@ -3,15 +3,14 @@
 <div class="header">
     <button class="text-justify" mat-button [matMenuTriggerFor]="menu">{{display}}<mat-icon>more_vert</mat-icon></button>
     <mat-menu #menu="matMenu" class="icon" >
-    <button class="text-justify"  class="text-justify" (click)=dynamicnumber(1) mat-menu-item class="btn">1</button>
+    <button class="text-justify"   (click)=dynamicnumber(1) mat-menu-item class="btn">1</button>
     <button class="text-justify"  (click)=dynamicnumber(2) mat-menu-item class="btn">2</button>
     <button class="text-justify" (click)=dynamicnumber(3) mat-menu-item class="btn">3</button>
     </mat-menu>
 
 
     <div class="icon">
-        <button class="btnicon" ><mat-icon >refresh</mat-icon></button>
-        
+        <button class="btnicon" (click)="getRandom()"><mat-icon >refresh</mat-icon></button>
     </div>
 
 </div>
@@ -19,12 +18,13 @@
 
 <div class="my-form-control" >
     <label for="quesiton">Question</label>
-    <input
+    <div 
         type="text"
         name="question"
         id="question"
-        disabled="true"
-        />
+        disabled="true">{{random}}
+    </div>
+    
     </div>
 
 
