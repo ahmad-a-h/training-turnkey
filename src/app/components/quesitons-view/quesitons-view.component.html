@@ -28,16 +28,20 @@
     </div>
 
 
-    <div class="my-form-control">
+    <div class="my-form-control ">
         <label for="answer">Answer</label>
-        <input
+        <div 
         type="text"
         name="answer"
         id="answer"
-        />
+        disabled="true"
+        *ngFor="let answers of arr" 
+        (click)="userCLick(answers)"
+        >{{answers}}
+    </div>
     </div>
 
-    <app-button id="btnsubmit" [btnName]="btnName"></app-button>
+    <app-button id="btnsubmit" [btnName]="btnName" (click)="userAnswer()"></app-button>
     <app-button class="app-button d-flex justify-content-center mt-2"[btnName]="btncreate"  (click)="createQuestion()"></app-button>
 
 </div>

@@ -14,6 +14,9 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatIconModule} from '@angular/material/icon';
 import { CreateQuestionComponent } from './components/create-question/create-question.component'
 import { HttpClientModule } from '@angular/common/http';
+import { LoginCardService } from './services/login-guard.service';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatSelectModule} from '@angular/material/select';
 
 
 @NgModule({
@@ -33,9 +36,11 @@ import { HttpClientModule } from '@angular/common/http';
     MatButtonModule,
     MatMenuModule,
     MatIconModule,
+    MatSelectModule,
+    MatRadioModule,
     HttpClientModule
   ],
-  providers: [QuesitonsViewComponent],
+  providers: [QuesitonsViewComponent,LoginCardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

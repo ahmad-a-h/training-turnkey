@@ -1,6 +1,34 @@
 .input-group-prepend
 {
-    margin-right: 5px;
+    margin-top: 5px;
     width: 150px;
+    height: fit-content
+}
+.myform-control
+{
+    margin-top: 5px ;
+    width: 200px;
 }
 
+.answers-container .question-container
+{
+    margin-top: 20px;
+    margin-right: 80px;
+}
+.input-group-text
+{
+    margin-bottom: 5px;
+}
+.question-container
+{
+    width: 100%;
+}
+::ng-deep .mat-form-field-appearance-fill div.mat-form-field-flex 
+    {
+        background-color: grey;
+    }
+
+
+.answers-container{
+    margin-top: 10%;
+}

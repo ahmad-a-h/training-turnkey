@@ -3,7 +3,7 @@ import { Component, Input, OnInit, } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { questions } from 'src/app/Questions';
-import { QuestionsServiceService } from 'src/app/questions-service.service';
+import { QuestionsServiceService } from '../../services/questions-service.service';
 
 
 @Component({
@@ -16,14 +16,23 @@ btnName="submit"
 btncreate="create a question"
 display = "Choose Difficulty"
 random:string
+answ:string
+arr=[]
+isRight:number
+@Input() answer
 
  question:questions[]=[]
   constructor(public router: Router,private http:HttpClient,private questionsService: QuestionsServiceService) { }
 
-  ngOnInit(): void {
-    // this.questionsService.postRandomQuestion().subscribe(data=>{
-    //   console.warn(data)
-    // })
+  ngOnInit() {
+    this.questionsService.getRandomQuestion().subscribe((data:any) => {
+      this.random=data["question"]
+      this.arr=data["answerText"]
+      // console.log(this.arr)
+      
+      
+    }
+    )
   } 
 
   public dynamicnumber(e)
@@ -33,10 +42,7 @@ random:string
       this.getQuestionDifficulty()
      
   }
-  var()
-  {
-    this.display
-  }
+ 
   createQuestion()
   {
    
@@ -45,12 +51,14 @@ random:string
 
 
   getRandom()
-  {
+  { 
     this.questionsService.getRandomQuestion().subscribe((data:any) => {
       this.random=data["question"]
+      this.arr=data["answerText"]
+      this.isRight=data["isRight"]
       this.display="Choose Difficulty"
-    }
-    )
+    })
+    return 
   }
 
   getQuestionDifficulty()
@@ -59,6 +67,16 @@ random:string
       this.random=data["question"]
      })
   }
+  userCLick(a)
+ {
+  console.log(a)
+  this.questionsService.getUserAnswer=this.answer
+
+ }
+ userAnswer()
+ {
+
+ }
 
  
   

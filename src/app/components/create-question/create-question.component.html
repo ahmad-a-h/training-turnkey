@@ -1,24 +1,42 @@
 <div class="container"> 
     
-    <button class="text-justify" mat-button [matMenuTriggerFor]="menu">{{display}}<mat-icon>more_vert</mat-icon></button>
-    <mat-menu #menu="matMenu" class="icon" >
-    <button class="text-justify"   (click)=dynamicnumber(1) mat-menu-item class="btn">1</button>
-    <button class="text-justify"  (click)=dynamicnumber(2) mat-menu-item class="btn">2</button>
-    <button class="text-justify" (click)=dynamicnumber(3) mat-menu-item class="btn">3</button>
+    <button  mat-button [matMenuTriggerFor]="menu" >{{display}}<mat-icon>more_vert</mat-icon></button>
+    <mat-menu #menu="matMenu" class="icon"  >
+      
+    <button   (click)=dynamicnumber(1) mat-menu-item class="btn">1</button>
+    <button   (click)=dynamicnumber(2) mat-menu-item class="btn">2</button>
+    <button   (click)=dynamicnumber(3) mat-menu-item class="btn">3</button>
+    
     </mat-menu>
-
-    <div class="forms-container " style="margin-top: 20%;">
+    
+    <div class="forms-container " style="margin-top: 18%;">
         <div class="input-group mb-3">
             <div class="input-group-prepend ">
               <span class="input-group-text" id="basic-addon1">Question</span>
             </div>
-            <textarea type="text" class="form-control" placeholder="question" aria-label="Question" aria-describedby="basic-addon1" [(ngModel)]="question"></textarea>
+            <div class="question-container">
+              <input type="text" class="form-control question" placeholder="Enter Question" aria-label="Desired Question" aria-describedby="basic-addon1" [(ngModel)]="question">
+            </div>
           </div>
           <div class="input-group mb-3 ">
+            
             <div class="input-group-prepend" >
               <span class="input-group-text " id="basic-addon1">Desired Answer</span>
             </div>
-            <input type="text" class="form-control" placeholder="answer" aria-label="Desired Answer" aria-describedby="basic-addon1" [(ngModel)]="answer" >
+            
+            <div class=" answers-container">
+
+              <mat-radio-group aria-label="Select an option">
+              <input type="text" class="myform-control form-control " placeholder=" answer 1" aria-label=" Answer " aria-describedby="basic-addon1" [(ngModel)]="answer1" >
+                <mat-radio-button value="1" (click)="isRight(0)">Correct Answer</mat-radio-button>
+              <input type="text" class="myform-control form-control" placeholder=" answer 2" aria-label=" Answer " aria-describedby="basic-addon1" [(ngModel)]="answer2" > 
+                <mat-radio-button value="2" (click)="isRight(1)" >Correct Answer</mat-radio-button>
+              <input type="text" class="myform-control form-control" placeholder=" answer 3" aria-label=" Answer " aria-describedby="basic-addon1" [(ngModel)]="answer3" >
+                <mat-radio-button value="3" (click)="isRight(2)">Correct Answer</mat-radio-button>
+              </mat-radio-group>
+  
+            </div>
+            
           </div>
     </div>
    
