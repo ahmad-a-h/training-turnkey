@@ -6,26 +6,27 @@ import { questions } from '../Questions';
   providedIn: 'root'
 })
 export class QuestionsServiceService {
-  
+
   private url="http://192.168.168.61:8081/quizapp/question"
   private difficultyurl='http://192.168.168.61:8081/quizapp/question/';
   private createQURL="http://192.168.168.61:8081/quizapp/new"
   private urlLogin="http://192.168.168.61:8081/quizapp/logIn"
-  
+  private urlToCheckAnswer="http://192.168.168.61:8081/quizapp/validate/"
   private difficulty:number
   private q:string
   private u:string
   private p:string
   private a1:string
   private a2:string
-  private a3:string 
+  private a3:string
   private answer:string
+  private id:number
   right: number;
   constructor(private http:HttpClient) { }
 
   public setDifficulty(value: number) {
     this.difficulty = value;
-  } 
+  }
   public setIsRight(value: number) {
     this.right = value;
   }
@@ -35,10 +36,23 @@ export class QuestionsServiceService {
     this.a2=value2
     this.a3=value3
   }
+  public checkId(value:number)
+  {
+    this.id=value
+
+     //console.log(this.urlToCheckAnswer+this.id)
+   return  this.http.get(this.urlToCheckAnswer+this.id)
+  }
+
   getRandomQuestion()
-  { 
+  {
 
     return this.http.get(this.url)
+  }
+  getfirstQuestion(i:number)
+  {
+
+    return this.http.get(this.difficultyurl+i)
   }
 
   getUserAnswer(value:string)
@@ -72,15 +86,15 @@ export class QuestionsServiceService {
     const isright='isRight'
     params[isright]=this.right
 
-      
+
     return this.http.post(this.createQURL,params)
-    
+
   }
-   getLoginCredentials(value1:string,value2:string)
-   {
+  getLoginCredentials(value1:string,value2:string)
+  {
     this.u=value1
     this.p=value2
-   }
+  }
 
 
   login()

@@ -10,7 +10,7 @@ import { QuestionsServiceService } from '../../services/questions-service.servic
 export class CreateQuestionComponent implements OnInit {
   btnName='Add'
   @Input() question
-  @Input() answer1 
+  @Input() answer1
   @Input() answer2
   @Input() answer3
   display = "Choose Difficulty"
