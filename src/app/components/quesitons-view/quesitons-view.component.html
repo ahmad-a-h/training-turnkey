@@ -1,3 +1,4 @@
+<app-navbar></app-navbar>
 <div class="container">
 
 <div class="header">
@@ -40,7 +41,12 @@
         >{{answers}}
     </div>
     </div>
-
+    <div class="score-container">
+        <h3>Your Score {{userscore}}</h3>
+        <mat-progress-bar mode="determinate" [value]="score"></mat-progress-bar>
+    </div>
     <app-button class="app-button d-flex justify-content-center mt-2"[btnName]="btncreate"  (click)="createQuestion()"></app-button>
-
+    
+            
+        
 </div>

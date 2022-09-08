@@ -44,9 +44,10 @@ width: 200px;
     
     display: inline-flex ;
 }
-.icon
+::ng-deep .icon
 {
-    position: absolute;
+    position: initial;
+    margin-left: 120px;
     margin-top: 6px;
     right: 830px;
 }
@@ -67,3 +68,13 @@ width: 200px;
     border: none;
     background: none;
 }
+
+.mat-progress-bar
+{
+    height: 10px;
+}
+::ng-deep
+    .mat-progress-bar-buffer {
+        background-color: #363636;
+    }
+    

@@ -17,7 +17,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoginCardService } from './services/login-guard.service';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatSelectModule} from '@angular/material/select';
-
+import {MatToolbarModule} from '@angular/material/toolbar';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { AllQsComponent } from './components/all-qs/all-qs.component';
+import {MatCardModule} from '@angular/material/card';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 
 @NgModule({
   declarations: [
@@ -27,6 +31,8 @@ import {MatSelectModule} from '@angular/material/select';
     QuesitonsViewComponent,
     ErrorComponent,
     CreateQuestionComponent,
+    NavbarComponent,
+    AllQsComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,7 +44,10 @@ import {MatSelectModule} from '@angular/material/select';
     MatIconModule,
     MatSelectModule,
     MatRadioModule,
-    HttpClientModule
+    HttpClientModule,
+    MatToolbarModule,
+    MatCardModule,
+    MatProgressBarModule
   ],
   providers: [QuesitonsViewComponent,LoginCardService],
   bootstrap: [AppComponent]

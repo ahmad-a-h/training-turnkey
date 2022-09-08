@@ -12,6 +12,7 @@ export class QuestionsServiceService {
   private createQURL="http://192.168.168.61:8081/quizapp/new"
   private urlLogin="http://192.168.168.61:8081/quizapp/logIn"
   private urlToCheckAnswer="http://192.168.168.61:8081/quizapp/validate/"
+  private allQurl="http://192.168.168.61:8081/quizapp/allQuestions"
   private difficulty:number
   private q:string
   private u:string
@@ -106,6 +107,12 @@ export class QuestionsServiceService {
     credentials[key2]=this.p
     //console.log(credentials)
     return this.http.post(this.urlLogin,credentials)
+  }
+
+  getAllQuestions()
+  {
+    
+    return this.http.get(this.allQurl)
   }
 
 }

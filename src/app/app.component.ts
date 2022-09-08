@@ -7,4 +7,6 @@ import { Component, Output } from '@angular/core';
 })
 export class AppComponent {
   @Output() title = 'QuizletXYZ';
+
+ 
 }

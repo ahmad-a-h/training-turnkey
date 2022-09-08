@@ -1,0 +1,14 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="my-form-control ">
+        <label for="answer">Questions</label>
+        <div
+        type="text"
+        name="question"
+        id="question"
+        disabled="true"
+        *ngFor="let questions of questions"
+        >{{questions.questionText}}
+    </div>
+    </div>
+</div>

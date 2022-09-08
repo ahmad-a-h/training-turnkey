@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Route, RouterModule } from '@angular/router';
+import { AllQsComponent } from './components/all-qs/all-qs.component';
 import { CreateQuestionComponent } from './components/create-question/create-question.component';
 import { ErrorComponent } from './components/error/error.component';
 import { NgComponentComponent } from './components/ng-component/ng-component.component';
@@ -12,6 +13,7 @@ const routes: Route[] = [
   {path:'login',component: NgComponentComponent},
   {path:'question',component: QuesitonsViewComponent, canActivate:[LoginCardService]},
   {path:'createquestion',component: CreateQuestionComponent,canActivate:[LoginCardService]},
+  {path:'checkallquestion',component: AllQsComponent,canActivate:[LoginCardService]},
   {path:'**',component:ErrorComponent}
 
 ];
