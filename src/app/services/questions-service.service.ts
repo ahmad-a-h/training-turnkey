@@ -1,18 +1,19 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, Input, Output } from '@angular/core';
+import { environment } from 'src/environments/environment';
 import { questions } from '../Questions';
 
 @Injectable({
   providedIn: 'root'
 })
 export class QuestionsServiceService {
-
-  private url="http://192.168.168.61:8081/quizapp/question"
-  private difficultyurl='http://192.168.168.61:8081/quizapp/question/';
-  private createQURL="http://192.168.168.61:8081/quizapp/new"
-  private urlLogin="http://192.168.168.61:8081/quizapp/logIn"
-  private urlToCheckAnswer="http://192.168.168.61:8081/quizapp/validate/"
-  private allQurl="http://192.168.168.61:8081/quizapp/allQuestions"
+  apirUrl=environment.apiURL
+  private url=this.apirUrl+'question'
+  private difficultyurl=this.apirUrl+'question';
+  private createQURL=this.apirUrl+'new'
+  private urlLogin=this.apirUrl+'logIn'
+  private urlToCheckAnswer=this.apirUrl+'validate'
+  private allQurl=this.apirUrl+'allQuestions'
   private difficulty:number
   private q:string
   private u:string

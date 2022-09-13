@@ -22,7 +22,6 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { AllQsComponent } from './components/all-qs/all-qs.component';
 import {MatCardModule} from '@angular/material/card';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
-
 @NgModule({
   declarations: [
     AppComponent,
